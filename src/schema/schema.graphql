@@ -1,0 +1,42 @@
+"BASE REQUESTS"
+type Query {
+    info: String!
+    users: [User!]
+    user(id: ID!): User!
+    cars: [Car!]
+    currentUser: User!
+}
+
+"MULTIPLE REQUESTS"
+type Mutation {
+    createUser(name: String! age: Int!): User!
+    deleteUser(id: ID!): User!
+    editUser(id: ID! name: String age: Int): User!
+    register(name: String! password: String! age: Int): User!
+    login(name: String! password: String!): LoginResponse!
+}
+
+"WEBSOCKET REQUESTS"
+type Subscription {
+    users: [User!]
+}
+
+"AUTHORIZATION RESULT"
+type LoginResponse {
+    token: String!
+    user: User!
+}
+
+"CAR OBJECT"
+type Car {
+    id: ID!
+    car: String!
+}
+
+"USER OBJECT"
+type User {
+    id: ID!
+    name: String!
+    age: Int
+    password: String
+}

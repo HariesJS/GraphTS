@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "esModuleInterop": true,
+      "target": "es2016",
+      "moduleResolution": "node",
+      "module": "commonjs",
+      "sourceMap": true,
+      "rootDir": "src",
+      "outDir": "dist",
+      "lib": ["es2016", "esnext.asynciterable", "ES2020.Promise"],
+      "skipLibCheck": true,
+       "strict": true
+    }
+  }
+  
